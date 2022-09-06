@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <div class="header-content">
+        </div>
+    </header>
+
+    <section class="current-project">
+        <h2 id="project-name"></h2>
+        <h3 id="timer"></h3>
+        <div id="button-container">
+            <button id="start-timer" class="control-button">Start Timer</button>
+            <button id="stop-timer" class="control-button">Stop Timer</button>
+            <button id="finish-task" class="control-button">Finish</button>
+        </div>
+    </section>
+
+    <section class="project-input">
+        <form id="new-project" method="POST">
+            <label for="project-name">New Project Name:</label>
+            <input type="text" id="project-name">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="list-container">
+        <ul class="project-list">
+        </ul>
+    </section>
+    <script src="./assets/script.js" async defer></script>
+</body>
+
+</html>
