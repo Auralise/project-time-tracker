@@ -1,0 +1,217 @@
+:root {
+    --submit-green: rgb(131, 224, 131);
+    --submit-green-hover: rgb(75, 253, 75);
+    --stop-red: rgb(245, 140, 140);
+    --stop-red-hover: rgb(255, 82, 82);
+    --finish-blue: rgb(178, 178, 243);
+    --finish-blue-hover: rgb(100, 100, 247);
+    --select-yellow: rgb(247, 247, 155);
+    --select-yellow-hover: rgb(253, 253, 68);
+
+    --button-hover-transition: 500ms;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #bbb;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2,
+h3 {
+    font-size: 300%;
+}
+
+h4 {
+    margin: 0;
+}
+
+.centered {
+    width: 70%;
+    margin: auto;
+}
+
+.header-content {
+    width: 100%;
+    text-align: center;
+}
+
+.current-project {
+    border: solid;
+    border-width: 1px;
+    padding: 1rem 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#project-name {
+    flex: 2 1 70%;
+}
+
+#timer {
+    flex: 1 1 30%;
+}
+
+#button-container {
+    flex-basis: content;
+}
+
+
+
+
+/* Buttons */
+.control-button {
+    letter-spacing: 1px;
+    padding: .5em 1em;
+    width: 10em;
+    margin: 0 15px;
+    border: none;
+    border-radius: 5px;
+    color: #111;
+}
+
+.start-button {
+    background-color: var(--submit-green);
+    transition: var(--button-hover-transition);
+}
+
+.start-button:hover {
+    background-color: var(--submit-green-hover);
+}
+
+.stop-button {
+    background-color: var(--stop-red);
+    transition: var(--button-hover-transition);
+}
+
+.stop-button:hover {
+    background-color: var(--stop-red-hover);
+}
+
+.finish-button {
+    background-color: var(--finish-blue);
+    transition: var(--button-hover-transition);
+}
+
+.finish-button:hover {
+    background-color: var(--finish-blue-hover);
+}
+
+.submit-button {
+    background-color: var(--submit-green);
+    transition: var(--button-hover-transition);
+}
+
+.submit-button:hover {
+    background-color: var(--submit-green-hover);
+}
+
+.select-button {
+    width: 5em;
+    margin-left: auto;
+    background-color: var(--select-yellow);
+    transition: var(--button-hover-transition);
+}
+
+.select-button:hover {
+    background-color: var(--select-yellow-hover);
+}
+
+/* Grid containers  */
+.grid-wrapper {
+    border: solid;
+    border-width: 1px;
+    padding: 1%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: min-content auto;
+    gap: 20px;
+}
+
+
+.todo-projects {
+    grid-column: 1;
+    grid-row: 2
+}
+
+.project-input {
+    grid-column: 1 / -1;
+}
+
+.completed-projects {
+    grid-column: 2;
+    grid-row: 2 /-1;
+}
+
+/* list styles */
+.project-list,
+.completed-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.project-list li,
+.completed-list li {
+    background-color: rgb(60, 60, 60);
+    padding: .5em;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.project-list>li:nth-child(2n),
+.completed-list>li:nth-child(2n) {
+    background-color: rgb(70, 70, 70);
+}
+
+/*form styles*/
+#new-project {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#new-project>label {
+    flex: 1 1 20%;
+    text-align: end;
+    max-width: 20ch;
+}
+
+#new-project>input,
+#new-project>textarea {
+    flex: 1 1 80%;
+    background-color: #ddd;
+    border-style: solid;
+    border-color: #444;
+    color: #222;
+}
+
+.submit-button {
+    flex: 0 0 50%;
+}
+
+.project-input>form>textarea {
+    vertical-align: top;
+}

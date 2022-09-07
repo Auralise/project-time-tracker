@@ -11,41 +11,73 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/brain.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body>
+<body class="preload">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
     <header>
-        <div class="header-content">
+        <div class="header-content centered">
+            <h1>Project Time Tracker</h1>
+
         </div>
     </header>
 
-    <section class="current-project">
-        <h2 id="project-name"></h2>
-        <h3 id="timer"></h3>
+    <section class="current-project centered">
+        <h2 id="project-name">No project selected</h2>
+        <h3 id="timer">00:00:00</h3>
         <div id="button-container">
-            <button id="start-timer" class="control-button">Start Timer</button>
-            <button id="stop-timer" class="control-button">Stop Timer</button>
-            <button id="finish-task" class="control-button">Finish</button>
+            <button id="start-timer" class="control-button start-button">Start Timer</button>
+            <button id="stop-timer" class="control-button stop-button">Stop Timer</button>
+            <button id="finish-task" class="control-button finish-button">Finish</button>
         </div>
     </section>
 
-    <section class="project-input">
-        <form id="new-project" method="POST">
-            <label for="project-name">New Project Name:</label>
-            <input type="text" id="project-name">
-            <button type="submit">Submit</button>
-        </form>
+    <section class="centered grid-wrapper">
+        <section class="project-input">
+            <form id="new-project" method="POST">
+                <label for="project-name" class="input-label">New Project Name:</label>
+                <input type="text" id="project-name">
+                
+                <label for="project-description" class="input-label">Description:</label>
+                <textarea id="project-description"></textarea>
+                
+                <button type="submit" class="control-button submit-button">Submit</button>
+            </form>
+        </section>
+
+        <div class="todo-projects">
+            <h4>Current Projects:</h4>
+            <ul class="project-list">
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>       
+            </ul>
+        </div>
+
+        <div class="completed-projects">
+            <h4>Completed projects:</h4>
+            <ul class="completed-list">
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>
+                <li>Test item <button class="select-button control-button">Select</button></li>
+            </ul>
+        </div>
+
     </section>
 
-    <section class="list-container">
-        <ul class="project-list">
-        </ul>
-    </section>
     <script src="./assets/script.js" async defer></script>
 </body>
 
